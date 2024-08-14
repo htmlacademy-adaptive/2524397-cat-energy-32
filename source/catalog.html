@@ -36,10 +36,10 @@
   </header>
   <main class="main">
     <h1 class="main__title">Каталог продукции</h1>
-    <section class="product">
+    <section class="catalog">
       <h2 class="visually-hidden">Комлексное питание Cat energy</h2>
-      <div class="product__list">
-        <article class="product__item">
+      <div class="catalog__list">
+        <article class="catalog__item product">
           <a class="product__link-img" href="#">
             <img class="product__img" src="#" width="107" height="140" alt="Cat energy pro 500 грамм с курицей" />
           </a>
@@ -62,7 +62,7 @@
           </ul>
           <a class="product__button text-button" href="#">Заказать</a>
         </article>
-        <article class="product__item">
+        <article class="catalog__item product">
           <a class="product__link-img" href="#">
             <img class="product__img" src="#" width="107" height="140" alt="Cat energy pro 1000 грамм с курицей" />
           </a>
@@ -85,7 +85,7 @@
           </ul>
           <a class="product__button text-button" href="#">Заказать</a>
         </article>
-        <article class="product__item">
+        <article class="catalog__item product">
           <a class="product__link-img" href="#">
             <img class="product__img" src="#" width="107" height="140" alt="Cat energy pro 500 грамм с рыбой" />
           </a>
@@ -108,7 +108,7 @@
           </ul>
           <a class="product__button text-button" href="#">Заказать</a>
         </article>
-        <article class="product__item">
+        <article class="catalog__item product">
           <a class="product__link-img" href="#">
             <img class="product__img" src="#" width="107" height="140" alt="Cat energy pro 1000 грамм с рыбой" />
           </a>
@@ -131,7 +131,7 @@
           </ul>
           <a class="product__button text-button" href="#">Заказать</a>
         </article>
-        <article class="product__item">
+        <article class="catalog__item product">
           <a class="product__link-img" href="#">
             <img class="product__img" src="#" width="107" height="140" alt="Cat energy slim 500 грамм с гречкой" />
           </a>
@@ -154,7 +154,7 @@
           </ul>
           <a class="product__button text-button" href="#">Заказать</a>
         </article>
-        <article class="product__item">
+        <article class="catalog__item product">
           <a class="product__link-img" href="#">
             <img class="product__img" src="#" width="107" height="140" alt="Cat energy slim 1000 грамм с гречкой" />
           </a>
@@ -177,7 +177,7 @@
           </ul>
           <a class="product__button text-button" href="#">Заказать</a>
         </article>
-        <article class="product__item">
+        <article class="catalog__item product">
           <a class="product__link-img" href="#">
             <img class="product__img" src="#" width="107" height="140" alt="Cat energy slim 500 грамм с рисом" />
           </a>
@@ -200,7 +200,7 @@
           </ul>
           <a class="product__button text-button" href="#">Заказать</a>
         </article>
-        <article class="product__item more-product">
+        <article class="catalog__item more-product">
           <h2 class="visually-hidden">Больше товаров</h2>
           <span class="more-product__text text-primary">Показать еще 100500 товаров</span>
           <span class="more-product__text text-secondary">На самом деле вкусов гораздо больше!</span>
@@ -253,16 +253,18 @@
       <span class="subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</span>
       <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="input-email">Ваш e-mail</label>
-        <input class="input-email" type="email" name="user-mail" placeholder="кuklachev@gmail.com" id="input-email" required>
+        <input class="subscribe__input" type="email" name="user-mail" placeholder="кuklachev@gmail.com" id="input-email" required>
         <button class="subscribe__button button" type="submit">Подписаться</button>
       </form>
     </section>
     <section class="contacts contacts--secondary">
-      <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-      <address>
-        <span>ул. Большая Конюшенная, д. 19/8</span>
-        <span>Санкт-Петербург</span>
-      </address>
+      <div class="contacts__text">
+        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <address class="contacts__address">
+          <span class="contacts__street">ул. Большая Конюшенная, д. 19/8</span>
+          <span class="contacts__city">Санкт-Петербург</span>
+        </address>
+      </div>
       <img class="contacts__img" src="#" width="320" height="362" alt="Наше местоположение" />
     </section>
   </main>
@@ -287,7 +289,7 @@
         </a>
       </li>
     </ul>
-    <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+    <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
       <span class="copyright__text">HTML Academy</span>
       <img class="copyright__logo" src="#" width="27" height="34" alt="Логотип HTML Academy" />
     </a>
