@@ -1,1 +1,22 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font;
+  color: $primary-text-color;
+  font-style: $primary-font-style;
+  font-size: $primary-font-size;
+  line-height: $primary-line-heigth;
+  background-color: $primary-bg;
+}
