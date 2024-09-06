@@ -1,13 +1,82 @@
+
 .advantages__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
-  color: #000000;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 36px, 40px, #000000);
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.advantages__description {
+  @include font($pr-font, $pr-font-style, $pr-font-weight, $pr-font-size, $pr-line-height, $pr-color);
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-left: 80px;
+}
+
+.advantages__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 24px;
+  height: 60px; /* УДАЛИТЬ */
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: $sec-bg;
+    left: -80px;
+  }
+}
+
+.advantages__item--content::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../icons/stack.svg#leaf");
+  width: 30px;
+  height: 32px;
+  left: -65px;
+  z-index: 1;
+}
+
+.advantages__item--cooking::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../icons/stack.svg#glass");
+  width: 26px;
+  height: 29px;
+  left: -65px;
+  z-index: 1;
+}
+
+.advantages__item--nutrition::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../icons/stack.svg#eat");
+  width: 25px;
+  height: 30px;
+  left: -65px;
+  z-index: 1;
+}
+
+.advantages__item--progress::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../icons/stack.svg#clocks");
+  width: 26px;
+  height: 31px;
+  left: -65px;
+  z-index: 1;
 }

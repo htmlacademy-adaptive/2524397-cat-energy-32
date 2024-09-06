@@ -12,11 +12,7 @@ img {
 }
 
 body {
+  @include font($pr-font, $pr-font-style, $pr-font-weight, $pr-font-size, $pr-line-height, $pr-color);
+  background-color: $pr-bg;
   margin: 0;
-  font-family: $primary-font;
-  color: $primary-text-color;
-  font-style: $primary-font-style;
-  font-size: $primary-font-size;
-  line-height: $primary-line-heigth;
-  background-color: $primary-bg;
 }

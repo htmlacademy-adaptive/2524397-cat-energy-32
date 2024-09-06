@@ -16,15 +16,28 @@
 <body class="body">
   <header class="header">
     <a class="header__logo logo" href="index.html">
-      <img class="logo__img" src="#" alt="Логотип Кэт Энерджи" width="33" height="38" />
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+        <img src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy">
+      </picture>
     </a>
     <a class="header__text-logo text-logo" href="index.html">
-      <img class="text-logo__img" src="#" alt="Cat energy" width="101" height="18" />
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/text-logo-desktop.svg" width="118" height="21" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/text-logo-tablet.svg" width="101" height="18" type="image/svg+xml">
+        <img src="images/text-logo-mobile.svg" width="101" height="18" alt="Cat Energy">
+      </picture>
     </a>
     <nav class="header__nav nav">
-      <button class="nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+      <div class="burger-wrapper burger">
+        <input class="burger__input" type="checkbox" name="burger-input" id="burger-input">
+        <label class="visually-hidden" for="burger-input">Меню</label>
+        <div class="burger__line first-line"></div>
+        <div class="burger__line second-line"></div>
+        <div class="burger__line third-line"></div>
+        <div class="burger__line fourth-line"></div>
+      </div>
       <ul class="nav__list">
         <li class="nav__item nav__item--current">
           <a class="nav__link" href="#">Главная</a>
@@ -45,7 +58,7 @@
       <picture>
         <source width="552" height="449" type="image/png" media="(min-width: 1440px)" srcset="images/hero-desktop@1x.png 1x, images/hero-desktop@2x.png 2x">
         <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/hero-tablet@1x.png 1x, images/hero-tablet@2x.png 2x">
-        <img class="hero__img" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Питание cat energy pro с курицей" />
+        <img class="hero__img" src="images/hero-mobile@1x.png" srcset="images/hero-mobile@2x.png 2x" width="280" height="270" alt="Питание cat energy pro с курицей">
       </picture>
       <a class="hero__link text-button" href="#">Подобрать программу</a>
     </section>
@@ -98,13 +111,15 @@
       <picture>
         <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x">
         <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x">
-        <img class="example__image example__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот до питания Cat energy" />
+        <img class="example__image example__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот до питания Cat energy">
       </picture>
-      <button class="example__slider" type="button">|</button>
+      <button class="example__slider" type="button">
+        <span class="visually-hidden">Ползунок для сравнения кота до и после питания Cat energy</span>
+      </button>
       <picture>
         <source width="560" height="512" type="image/png" media="(min-width: 1440px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x">
         <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x">
-        <img class="example__image example__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот после питания Cat energy" />
+        <img class="example__image example__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот после питания Cat energy">
       </picture>
     </section>
     <section class="contacts">
@@ -118,13 +133,17 @@
       <picture>
         <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/location-desktop@1x.png 1x, images/location-desktop@2x.png 2x">
         <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/location-tablet@1x.png 1x, images/location-tablet@2x.png 2x">
-        <img class="contacts__img" src="images/location-mobile@1x.png" srcset="images/location-mobile@2x.png 2x" width="320" height="362" alt="Наше местоположение" />
+        <img class="contacts__img" src="images/location-mobile@1x.png" srcset="images/location-mobile@2x.png 2x" width="320" height="362" alt="Наше местоположение">
       </picture>
     </section>
   </main>
   <footer class="footer">
     <a class="footer__text-logo text-logo" href="index.html">
-      <img class="text-logo__img" src="#" alt="Cat energy" width="101" height="18" />
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/text-logo-desktop.svg" width="128" height="24" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/text-logo-tablet.svg" width="128" height="24" type="image/svg+xml">
+        <img src="images/text-logo-mobile.svg" width="128" height="24" alt="Текстовый логотип Cat Energy.">
+      </picture>
     </a>
     <ul class="footer__social-list social">
       <li class="social__item">
@@ -145,7 +164,11 @@
     </ul>
     <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
       <span class="copyright__text">HTML Academy</span>
-      <img class="copyright__logo" src="#" width="27" height="34" alt="Логотип HTML Academy" />
+      <picture>
+        <source media="(min-width: 1440px)" srcset="images/html-logo-desktop.svg" width="27" height="34" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/html-logo-tablet.svg" width="27" height="34" type="image/svg+xml">
+        <img class="copyright__img" src="images/html-logo-mobile.svg" width="27" height="34" alt="Логотип HTML Academy">
+      </picture>
     </a>
   </footer>
 </body>

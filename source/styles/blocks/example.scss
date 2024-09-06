@@ -1,13 +1,19 @@
-.example {
-  background-color: #eaeaea;
+.example__title {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 36px, 40px, #000000);
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
-.example__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
-  color: #000000;
+.example__description {
+  @include font($pr-font, $pr-font-style, $pr-font-weight, $pr-font-size, $pr-line-height, $pr-color);
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__list {
@@ -17,22 +23,81 @@
 }
 
 .example__result {
-  font-family: $secondary-font;
-  font-size: 24px;
-  line-height: 24px;
-  color: #000000;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 24px, 24px, #000000);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__text {
-  font-size: 12px;
-  line-height: 12px;
+  @include font($pr-font, $pr-font-style, $pr-font-weight, 12px, 12px, $pr-color);
   text-transform: lowercase;
+
+  @media (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .example__price {
-  font-family: $secondary-font;
-  line-height: 20px;
-  color: #000000;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, $pr-font-size, 20px, #000000);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+  }
+}
+
+.example__slider {
+  display: block;
+  position: relative;
+  padding: 0;
+  border: none;
+  width: 4px;
+  height: 256px; //заменить на 100% после сеток
+  background-color: #666666;
+  cursor: pointer;
+  margin-left: 138px; //заменить после сеток
+
+  &:hover {
+    background-color: $sec-bg;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #666666;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: 50%;
+    left: -17px;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    mask-image: url("../../icons/stack.svg#triangles");
+    background-color: #666666;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+  }
+
+  &:hover::before {
+    border-color: $sec-bg;
+  }
+
+  &:hover::after {
+    background-color: $sec-bg;
+  }
 }

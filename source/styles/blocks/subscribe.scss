@@ -1,21 +1,27 @@
 .subscribe__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-  color: #000000;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 24px, 24px, #000000);
+
+  @media (min-width: $tablet) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .subscribe__text {
-  font-family: $secondary-font;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 24px, #000000);
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .subscribe__input::placeholder {
-  font-family: $secondary-font;
-  font-size: 20px;
-  color: #444444;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 20px, 20px, #444444);
   text-transform: uppercase;
 }

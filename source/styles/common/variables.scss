@@ -1,11 +1,17 @@
 //Шрифт
-$primary-font: "Lato", "Arial", sans-serif;
-$primary-text-color: #444444;
-$primary-font-style: normal;
-$primary-font-size: 14px;
-$primary-line-heigth: 18px;
-$secondary-font: "Oswald", "Arial", sans-serif;
+$pr-font: "Lato", "Arial", sans-serif;
+$pr-font-style: normal;
+$pr-font-weight: 400;
+$pr-font-size: 14px;
+$pr-line-height: 18px;
+$pr-color: #444444;
+
+$sec-font: "Oswald", "Arial", sans-serif;
 
 //Фон
-$primary-bg: #ffffff;
-$secondary-bg: #68b738;
+$pr-bg: #ffffff;
+$sec-bg: #68b738;
+
+//Адаптивность
+$tablet: 768px;
+$desktop: 1440px;

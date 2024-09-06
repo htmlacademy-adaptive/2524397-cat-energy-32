@@ -3,15 +3,21 @@
 }
 
 .additional__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  color: #222222;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 16px, #222222);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional__quantity,
 .additional__price {
-  line-height: 14px;
+  @include font($pr-font, $pr-font-style, $pr-font-weight, $pr-font-size, 14px, $pr-color);
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

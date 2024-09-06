@@ -1,9 +1,11 @@
 .button {
-  font-family: $secondary-font;
-  color: #ffffff;
-  font-size: 20px;
-  line-height: 26px;
-  background-color: $secondary-bg;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 20px, #ffffff);
+  background-color: $sec-bg;
   text-transform: uppercase;
   border: none;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

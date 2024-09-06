@@ -1,7 +1,8 @@
 .main__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
-  color: #000000;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 36px, 36px, #000000);
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

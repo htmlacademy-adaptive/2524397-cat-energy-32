@@ -1,17 +1,89 @@
-.nav {
-  font-family: $secondary-font;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
 .nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.burger-wrapper {
+  position: relative;
+  margin-left: 166px;
+  width: 24px;
+  height: 16px;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.burger__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.burger__input:checked ~ .first-line,
+.burger__input:checked ~ .fourth-line {
+  display: none;
+}
+
+.burger__input:checked ~ .second-line {
+  transform: rotate(45deg);
+}
+
+.burger__input:checked ~ .third-line {
+  transform: rotate(-45deg);
+}
+
+.burger:has(.burger__input:checked) ~ .nav__list {
+  display: block;
+}
+
+.burger__line {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  transition: 0.5s all;
+}
+
+.first-line {
+  top: 0;
+}
+
+.second-line,
+.third-line {
+  top: 7px;
+}
+
+.fourth-line {
+  top: 14px;
 }
 
 .nav__link {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 20px, 20px, #000000);
+  text-transform: uppercase;
   text-decoration: none;
-  color: #000000;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 20px;
+    color: #ffffff;
+    background-color: $sec-bg; /* УДАЛИТЬ */
+  }
 }

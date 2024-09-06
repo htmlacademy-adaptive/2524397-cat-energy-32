@@ -1,18 +1,24 @@
 .hero {
-  font-family: $secondary-font;
-  color: #ffffff;
+  background-color: $sec-bg;
 }
 
 .hero__title {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
-  background-color: $secondary-bg;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 36px, 36px, #ffffff);
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+  }
 }
 
 .hero__subtitle {
-  font-size: 14px;
-  line-height: 14px;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 14px, 14px, #ffffff);
   text-transform: uppercase;
-  background-color: $secondary-bg;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
 }

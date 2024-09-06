@@ -1,7 +1,13 @@
 .additional-products__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-  color: #000000;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 24px, 24px, #000000);
+
+  @media (min-width: $tablet) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }

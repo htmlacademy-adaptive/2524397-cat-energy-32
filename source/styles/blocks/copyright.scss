@@ -1,6 +1,4 @@
 .copyright {
-  font-size: 16px;
-  line-height: 20px;
-  color: #444444;
+  @include font($pr-font, $pr-font-style, $pr-font-weight, 16px, 20px, #444444);
   text-decoration: none;
 }

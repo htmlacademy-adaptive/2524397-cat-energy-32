@@ -7,3 +7,12 @@
     src: $font-src;
   }
 }
+
+@mixin font($font-family, $font-style, $font-weight, $font-size, $line-height, $color) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}

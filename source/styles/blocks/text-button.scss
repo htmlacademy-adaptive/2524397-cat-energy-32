@@ -1,14 +1,21 @@
 .text-button {
-  font-family: $secondary-font;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 20px;
-  background-color: $secondary-bg;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 20px, #ffffff);
+  background-color: $sec-bg;
   text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .text-button--disabled {
-  color: #444444;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 20px, #444444);
   background-color: #f2f2f2;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

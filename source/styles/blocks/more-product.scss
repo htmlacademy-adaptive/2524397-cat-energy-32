@@ -1,12 +1,42 @@
 .more-product__title {
-  font-family: $secondary-font;
-  font-size: 16px;
-  line-height: 20px;
-  color: #111111;
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 20px, #111111);
   text-transform: uppercase;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #d3d3d3;
+    width: 60px;
+    height: 2px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #d3d3d3;
+    width: 2px;
+    height: 60px;
+    top: 0;
+    left: 50%;
+  }
 }
 
 .more-product__subtitle {
-  font-size: 12px;
-  line-height: 16px;
+  @include font($pr-font, $pr-font-style, $pr-font-weight, 12px, 16px, $pr-color);
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
