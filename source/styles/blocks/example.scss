@@ -1,30 +1,109 @@
+.example {
+  padding: 25px 20px 38px;
+  background-color: #eaeaea;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    padding: 45px 30px 101px;
+    background-image: linear-gradient(to bottom, (#ffffff 60%, #f2f2f2 60%));
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    padding-bottom: 75px;
+    background-image: linear-gradient(to bottom, (#ffffff 22%, #f2f2f2 22%));
+  }
+}
+
+.example__wrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.example__list-wrapper {
+  @media (min-width: $tablet) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 99px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+    align-items: start;
+    gap: 55px;
+    margin-bottom: 0;
+  }
+}
+
 .example__title {
   @include font($sec-font, $pr-font-style, $pr-font-weight, 36px, 40px, #000000);
+  margin: 0;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__description {
   @include font($pr-font, $pr-font-style, $pr-font-weight, $pr-font-size, $pr-line-height, $pr-color);
+  margin-bottom: 20px;
 
   @media (min-width: $tablet) {
+    margin-bottom: 55px;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 784px;
   }
 }
 
 .example__list {
-  margin: 0;
+  max-width: 280px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    gap: 43px;
+  }
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border-radius: 5px;
+
+  @media (min-width: $tablet) {
+    width: 162px;
+  }
 }
 
 .example__result {
   @include font($sec-font, $pr-font-style, $pr-font-weight, 24px, 24px, #000000);
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+  width: 124px;
+  height: 56px;
+  border: 2px solid #cdcdcd;
 
   @media (min-width: $tablet) {
     font-size: 30px;
@@ -35,32 +114,53 @@
 .example__text {
   @include font($pr-font, $pr-font-style, $pr-font-weight, 12px, 12px, $pr-color);
   text-transform: lowercase;
+  width: 80px;
+  text-align: center;
+  margin: -13px;
+  background-color: #eaeaea;
 
   @media (min-width: $tablet) {
+    background-color: #ffffff;
     font-size: 14px;
     line-height: 14px;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: #f2f2f2;
   }
 }
 
 .example__price {
   @include font($sec-font, $pr-font-style, $pr-font-weight, $pr-font-size, 20px, #000000);
   text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet) {
+    max-width: 174px;
+    text-align: end;
     font-size: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
   }
 }
 
 .example__slider {
   display: block;
-  position: relative;
+  position: absolute;
   padding: 0;
   border: none;
   width: 4px;
-  height: 256px; //заменить на 100% после сеток
+  height: 100%;
   background-color: #666666;
   cursor: pointer;
-  margin-left: 138px; //заменить после сеток
+  left: 49%;
 
   &:hover {
     background-color: $sec-bg;
@@ -99,5 +199,41 @@
 
   &:hover::after {
     background-color: $sec-bg;
+  }
+}
+
+.example__slider-wrapper {
+  position: relative;
+  max-width: 280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $tablet) {
+    max-width: 650px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 512px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.example__slider-wrapper picture {
+  overflow: hidden;
+}
+
+.example__image {
+  max-width: none;
+  height: 100%;
+}
+
+.example__image--after {
+  margin-left: -100%;
+
+  @media (min-width: $tablet) {
+    margin-left: -90%;
   }
 }

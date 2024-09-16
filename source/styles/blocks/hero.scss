@@ -1,24 +1,119 @@
 .hero {
-  background-color: $sec-bg;
+  background-image: linear-gradient(to bottom, (rgba(104, 183, 56, 0.85) 63%, #ffffff 63%)), url("../../images/index-background-mobile@2x.png");
+  background-color: rgb(68, 67, 70);
+  background-position: top, top center;
+  background-size: 100%, contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: 27px;
+  margin-bottom: 20px;
+
+  @media (min-width: 500px) {
+    background-size: 100%, cover;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    background-image: none;
+    padding-top: 65px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    background-image: linear-gradient(to right, (#ffffff 50%,rgba(104, 183, 56, 0.85) 50%)), url("../../images/index-background-mobile@2x.png");
+    background-color: rgb(68, 67, 70);
+    background-position: top, right center;
+    background-size: 100%, contain;
+    background-repeat: no-repeat;
+    padding-top: 224px;
+    margin-bottom: 82px;
+  }
 }
 
 .hero__title {
   @include font($sec-font, $pr-font-style, $pr-font-weight, 36px, 36px, #ffffff);
+  max-width: 250px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  text-align: center;
 
   @media (min-width: $tablet) {
+    order: -3;
+    max-width: 416px;
+    margin: 0;
+    margin-left: 120px;
+    margin-bottom: 40px;
+    text-align: start;
     font-size: 60px;
     line-height: 60px;
     color: #000000;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+    margin-left: 80px;
   }
 }
 
 .hero__subtitle {
   @include font($sec-font, $pr-font-style, $pr-font-weight, 14px, 14px, #ffffff);
   text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet) {
+    order: -2;
+    margin-left: 120px;
+    text-align: start;
     font-size: 20px;
     line-height: 20px;
     color: #000000;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 80px;
+  }
+}
+
+.hero__img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    margin-top: -75px;
+    margin-left: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    margin-top: -367px;
+    margin-left: 557px;
+  }
+}
+
+.hero__link {
+  display: block;
+  max-width: 100%;
+  margin: 0 20px;
+  padding: 10px 64px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    order: -1;
+    max-width: 244px;
+    margin: 0;
+    margin-left: 120px;
+    padding: 14px 26px;
+    z-index: 1;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 80px;
   }
 }

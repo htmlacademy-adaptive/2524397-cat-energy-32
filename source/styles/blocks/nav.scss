@@ -1,73 +1,109 @@
+.nav {
+  margin-left: 10px;
+  margin-bottom: 2px;
+
+  @media (min-width: $tablet) {
+    max-width: 436px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 476px;
+  }
+}
+
 .nav__list {
+  display: none;
+  position: absolute;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
-  display: none;
+  left: 0;
+  top: 65px;
+  text-align: center;
+  z-index: 1;
 
   @media (min-width: $tablet) {
+    position: static;
+    display: flex;
+    gap: 33px;
+  }
+}
+
+.nav__list--nojs {
+  display: block;
+  position: static;
+}
+
+.nav__list--nojs + .nav__toggle {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nav__list--closed {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nav__list--opened {
+  border-bottom: 1px solid #e6e6e6;
+
+  @media (max-width: 767px) {
     display: block;
   }
 }
 
-.burger-wrapper {
+.nav__item {
+  background-color: #ffffff;
+  padding: 22px 0 24px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(230, 230, 230, 1);
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    border: none;
+  }
+
+  @media (min-width: $desktop) {
+    background: none;
+  }
+}
+
+.nav__toggle {
+  display: block;
   position: relative;
-  margin-left: 166px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
   width: 24px;
-  height: 16px;
+  height: 2px;
+  background-color: #000000;
 
   @media (min-width: $tablet) {
     display: none;
   }
 }
 
-.burger__input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.burger__input:checked ~ .first-line,
-.burger__input:checked ~ .fourth-line {
-  display: none;
-}
-
-.burger__input:checked ~ .second-line {
-  transform: rotate(45deg);
-}
-
-.burger__input:checked ~ .third-line {
-  transform: rotate(-45deg);
-}
-
-.burger:has(.burger__input:checked) ~ .nav__list {
+.nav__toggle::before {
+  content: "";
   display: block;
-}
-
-.burger__line {
   position: absolute;
+  top: -8px;
   width: 24px;
   height: 2px;
   background-color: #000000;
-  transition: 0.5s all;
 }
 
-.first-line {
-  top: 0;
-}
-
-.second-line,
-.third-line {
-  top: 7px;
-}
-
-.fourth-line {
-  top: 14px;
+.nav__toggle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
 }
 
 .nav__link {
@@ -82,8 +118,7 @@
 
   @media (min-width: $desktop) {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
     color: #ffffff;
-    background-color: $sec-bg; /* УДАЛИТЬ */
   }
 }

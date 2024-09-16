@@ -1,5 +1,10 @@
 .main__title {
   @include font($sec-font, $pr-font-style, $pr-font-weight, 36px, 36px, #000000);
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 41px;
+  padding-left: 20px;
+  border-top: 1px solid #d9d9d9;
 
   @media (min-width: $tablet) {
     font-size: 60px;
