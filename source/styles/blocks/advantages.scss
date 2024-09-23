@@ -1,4 +1,5 @@
 .advantages {
+  position: relative;
   padding: 0 20px;
 
   @media (min-width: $tablet) {
@@ -7,10 +8,28 @@
   }
 
   @media (min-width: $desktop) {
+    padding: 0;
     max-width: 1220px;
     margin: 0 auto;
-    margin-top: 69px;
+    margin-top: 71px;
     margin-bottom: 69px;
+  }
+
+  &::after {
+    @media (min-width: $tablet) {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #e6e6e6;
+      bottom: -47px;
+      left: 0;
+    }
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
   }
 }
 
@@ -20,6 +39,7 @@
   margin-bottom: 40px;
 
   @media (min-width: $tablet) {
+    margin-bottom: 32px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -36,7 +56,15 @@
     padding-top: 151px;
     padding-bottom: 57px;
     font-size: 16px;
-    line-height: 25px;
+    line-height: 24px;
+  }
+}
+
+.advantages__description br {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
   }
 }
 
@@ -52,12 +80,21 @@
 
   @media (min-width: $tablet) {
     flex-flow: row wrap;
-    gap: 37px 137px;
+    gap: 37px 133px;
     font-size: 60px;
     line-height: 60px;
   }
 
+  @media (min-width: 1075px) {
+    max-width: 704px;
+    margin: 0 auto;
+    margin-bottom: 49px;
+  }
+
   @media (min-width: $desktop) {
+    max-width: 1440px;
+    margin: 0;
+    margin-bottom: 49px;
     gap: 80px;
   }
 }
@@ -71,9 +108,13 @@
 
   @media (min-width: $tablet) {
     flex-direction: column;
-    max-width: 230px;
+    width: 250px;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 245px;
   }
 }
 
@@ -84,7 +125,7 @@
     position: absolute;
     display: block;
     top: 0;
-    right: 0;
+    left: 115px;
   }
 }
 

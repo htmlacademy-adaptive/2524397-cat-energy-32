@@ -1,5 +1,23 @@
 .text-logo {
   display: block;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus,
+  &.disabled:active {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
 
 .text-logo--catalog {

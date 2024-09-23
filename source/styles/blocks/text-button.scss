@@ -5,6 +5,29 @@
   text-decoration: none;
 
   @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.text-button--catalog {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.text-button--additional {
+  @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 20px;
   }
@@ -17,5 +40,17 @@
   @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+    color: #444444;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: #444444;
   }
 }

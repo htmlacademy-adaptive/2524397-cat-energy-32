@@ -1,3 +1,29 @@
+.main {
+  overflow-x: hidden;
+}
+
+.main__hero {
+  background-image: linear-gradient(to bottom, (rgba(104, 183, 56, 0.85) 63%, #ffffff 63%)), url("../../images/index-background-mobile@2x.png");
+  background-color: #4f4e53;
+  background-position: top, top center;
+  background-size: 100%, contain;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    background-color: #ffffff;
+    background-image: none;
+  }
+
+  @media (min-width: $desktop) {
+    background-image: linear-gradient(to right, (#ffffff 50%,rgba(104, 183, 56, 0.85) 50%)), url("../../images/index-background-desktop-full@2x.png");
+    background-color: #4f4e53;
+    background-position: top, right -321px bottom;
+    background-size: 100%, contain;
+    background-repeat: no-repeat;
+  }
+}
+
 .main__title {
   @include font($sec-font, $pr-font-style, $pr-font-weight, 36px, 36px, #000000);
   margin: 0;
@@ -7,7 +33,21 @@
   border-top: 1px solid #d9d9d9;
 
   @media (min-width: $tablet) {
+    padding-top: 51px;
+    padding-left: 29px;
+    padding-bottom: 94px;
+    border: none;
     font-size: 60px;
     line-height: 60px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 74px;
+    padding-left: 0;
+  }
+}
+
+.main__title-wrapper {
+  max-width: 1220px;
+  margin: 0 auto;
 }

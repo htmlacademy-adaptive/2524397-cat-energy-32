@@ -4,14 +4,14 @@
   position: relative;
 
   @media (min-width: $tablet) {
-    padding: 45px 30px 101px;
-    background-image: linear-gradient(to bottom, (#ffffff 60%, #f2f2f2 60%));
+    padding: 43px 30px 97px;
+    background-image: linear-gradient(to bottom, (#ffffff 57%, #f2f2f2 57%));
   }
 
   @media (min-width: $desktop) {
     padding: 0;
     padding-bottom: 75px;
-    background-image: linear-gradient(to bottom, (#ffffff 22%, #f2f2f2 22%));
+    background-image: linear-gradient(to bottom, (#ffffff 22%, #f2f2f2 23%));
   }
 }
 
@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 99px;
+    margin-bottom: 112px;
   }
 
   @media (min-width: $desktop) {
@@ -41,21 +41,22 @@
 .example__title {
   @include font($sec-font, $pr-font-style, $pr-font-weight, 36px, 40px, #000000);
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 
   @media (min-width: $tablet) {
+    margin-bottom: 60px;
     font-size: 60px;
     line-height: 60px;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 146px;
+    margin-bottom: 145px;
   }
 }
 
 .example__description {
   @include font($pr-font, $pr-font-style, $pr-font-weight, $pr-font-size, $pr-line-height, $pr-color);
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet) {
     margin-bottom: 55px;
@@ -64,7 +65,16 @@
   }
 
   @media (min-width: $desktop) {
+    margin-bottom: 69px;
     margin-right: 784px;
+  }
+}
+
+.example__description br {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
   }
 }
 
@@ -100,33 +110,48 @@
   text-transform: uppercase;
   display: flex;
   justify-content: center;
-  padding-top: 12px;
+  padding-top: 14px;
   width: 124px;
   height: 56px;
   border: 2px solid #cdcdcd;
 
   @media (min-width: $tablet) {
+    padding-top: 14px;
+    width: 162px;
+    height: 72px;
     font-size: 30px;
     line-height: 37px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 161px;
   }
 }
 
 .example__text {
   @include font($pr-font, $pr-font-style, $pr-font-weight, 12px, 12px, $pr-color);
   text-transform: lowercase;
-  width: 80px;
+  width: 87px;
   text-align: center;
   margin: -13px;
   background-color: #eaeaea;
 
   @media (min-width: $tablet) {
+    width: auto;
     background-color: #ffffff;
     font-size: 14px;
     line-height: 14px;
+    padding: 0 10px;
   }
 
   @media (min-width: $desktop) {
     background-color: #f2f2f2;
+  }
+}
+
+.example__text br {
+  @media (min-width: $tablet) {
+    display: none;
   }
 }
 
@@ -141,13 +166,25 @@
     max-width: 174px;
     text-align: end;
     font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 0;
+    margin-top: 8px;
   }
 
   @media (min-width: $desktop) {
     max-width: 100%;
+    margin-left: 1px;
+    margin-top: 14px;
+    line-height: 20px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 0;
+  }
+}
+
+.example__price-wrapper {
+  @media (min-width: $desktop) {
+    margin-left: 65px;
   }
 }
 
@@ -162,8 +199,18 @@
   cursor: pointer;
   left: 49%;
 
-  &:hover {
+  @media (min-width: $tablet) {
+    left: 278px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
     background-color: $sec-bg;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
   }
 
   &::before {
@@ -178,6 +225,10 @@
     top: 50%;
     left: -17px;
     transform: translateY(-50%);
+
+    @media (min-width: $tablet) {
+      left: -18px;
+    }
   }
 
   &::after {
@@ -193,12 +244,22 @@
     transform: translateY(-50%);
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     border-color: $sec-bg;
   }
 
-  &:hover::after {
+  &:active::before {
+    border-color: #5eaa2f;
+  }
+
+  &:hover::after,
+  &:focus::after {
     background-color: $sec-bg;
+  }
+
+  &:active::after {
+    background-color: #5eaa2f;
   }
 }
 
@@ -210,7 +271,7 @@
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: $tablet) {
-    max-width: 650px;
+    max-width: 560px;
   }
 
   @media (min-width: $desktop) {
@@ -228,12 +289,12 @@
 .example__image {
   max-width: none;
   height: 100%;
+
+  @media (min-width: $tablet) {
+    height: auto;
+  }
 }
 
 .example__image--after {
   margin-left: -100%;
-
-  @media (min-width: $tablet) {
-    margin-left: -90%;
-  }
 }

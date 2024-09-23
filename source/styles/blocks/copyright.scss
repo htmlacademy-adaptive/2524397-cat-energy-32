@@ -1,18 +1,57 @@
 .copyright {
   @include font($pr-font, $pr-font-style, $pr-font-weight, 16px, 20px, #444444);
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  width: 320px;
   align-items: center;
   text-decoration: none;
-  padding: 20px 0;
+  padding: 20px;
+  padding-top: 27px;
 
   @media (min-width: $tablet) {
     width: 168px;
     padding: 0;
+    padding-top: 2px;
+    padding-left: 6px;
+  }
+
+  &:hover .copyright__text::after,
+  &:focus .copyright__text::after {
+    background-color: #68b738;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
-.copyright__img {
-  display: block;
+.copyright__text {
+  position: relative;
+
+  @media (min-width: $tablet) {
+    margin-top: 3px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 27px;
+    height: 34px;
+    background-color: #666666;
+    mask-image: url("../../icons/html-logo.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    top: -7px;
+    left: 253px;
+
+    @media (min-width: $tablet) {
+      top: -6px;
+      left: 136px;
+    }
+  }
 }

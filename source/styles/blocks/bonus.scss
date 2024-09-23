@@ -1,13 +1,22 @@
 .bonus {
   position: relative;
-  background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/bonus-background-mobile@2x.png");
-  background-repeat: no-repeat;
-  background-position: center, center center;
-  background-size: auto, cover;
-  background-color: $sec-bg;
   margin-top: 35px;
   padding-top: 187px;
   padding-bottom: 43px;
+
+  @media (min-width: $tablet) {
+    max-width: 707px;
+    margin: 0 auto;
+    margin-top: 71px;
+    padding: 72px 125px 68px 421px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 245px;
+    padding: 185px 42px 43px;
+    margin: 0;
+  }
 }
 
 .bonus__text {
@@ -16,6 +25,15 @@
   text-align: center;
   margin-left: 58px;
   margin-right: 61px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: center;
+  }
 }
 
 .bonus::before {
@@ -28,4 +46,13 @@
   width: 78px;
   height: 80px;
   background-image: url("../../icons/stack.svg#gift");
+
+  @media (min-width: $tablet) {
+    top: 58px;
+    left: 118px;
+  }
+
+  @media (min-width: $desktop) {
+    left: 123px;
+  }
 }
