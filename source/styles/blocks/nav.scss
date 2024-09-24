@@ -17,6 +17,10 @@
   }
 }
 
+.nav:has(.nav__list--nojs) {
+  width: 100%;
+}
+
 .nav__list {
   display: none;
   position: absolute;
@@ -43,7 +47,7 @@
     position: static;
     padding-top: 10px;
     border-bottom: 1px solid #e6e6e6;
-    width: 260px;
+    width: 100%;
   }
 }
 

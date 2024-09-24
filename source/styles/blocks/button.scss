@@ -23,3 +23,17 @@
     color: rgba(255, 255, 255, 0.3);
   }
 }
+
+.button--disabled {
+  outline: none;
+  pointer-events: none;
+  opacity: 0.6;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+}

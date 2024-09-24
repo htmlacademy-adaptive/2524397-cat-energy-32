@@ -36,6 +36,7 @@
 .text-button--disabled {
   @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 20px, #444444);
   background-color: #f2f2f2;
+  pointer-events: none;
 
   @media (min-width: $tablet) {
     font-size: 16px;
