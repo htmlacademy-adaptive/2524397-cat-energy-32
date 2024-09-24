@@ -1,0 +1,157 @@
+.subscribe {
+  position: relative;
+  margin-top: 41px;
+  margin-bottom: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet) {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 41px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 103px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow-x: hidden;
+    height: 2px;
+    left: -100%;
+    width: 1000%;
+    background-color: #68b738;
+    top: 10px;
+
+    @media (min-width: $tablet) {
+      top: 13px;
+    }
+
+    @media (min-width: $desktop) {
+      top: 16px;
+    }
+  }
+}
+
+.subscribe__title {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 24px, 24px, #000000);
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 31px;
+  margin-left: -20px;
+  padding-left: 20px;
+  padding-right: 40px;
+  position: relative;
+  background-color: #ffffff;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 66px;
+    font-size: 32px;
+    line-height: 32px;
+    margin-left: 0;
+    padding-left: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 40px;
+    line-height: 40px;
+    margin-left: 40px;
+    padding-left: 40px;
+    margin-bottom: 71px;
+  }
+}
+
+.subscribe__text {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 24px, #000000);
+  display: block;
+  text-align: center;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 32px;
+    padding-right: 66px;
+    padding-left: 66px;
+  }
+}
+
+.subscribe__form {
+  @media (min-width: $tablet) {
+    display: flex;
+    margin-left: 38px;
+    margin-right: 38px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 752px;
+    margin: 0 auto;
+  }
+}
+
+.subscribe__input {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 20px, 29px, #444444);
+  width: 100%;
+  padding: 13px;
+  padding-left: 11px;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border: 2px solid #cdcdcd;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    width: 376px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 496px;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+  }
+
+  &:disabled,
+  &:disabled:focus,
+  &:disabled:hover,
+  &:disabled:active {
+    outline: none;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  &--error {
+    border: 2px solid #ff8282;
+  }
+
+  &--valid {
+    border: 2px solid #5eaa2f;
+  }
+}
+
+.subscribe__input::placeholder {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 20px, 29px, #444444);
+  text-transform: uppercase;
+}
+
+.subscribe__button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    width: 256px;
+  }
+}

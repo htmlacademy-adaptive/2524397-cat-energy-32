@@ -1,0 +1,243 @@
+.program {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+  }
+}
+
+.program__item {
+  background-color: #f2f2f2;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    padding: 77px 63px 53px 52px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    padding: 77px 61px 55px 52px;
+    max-width: 570px;
+  }
+}
+
+.program__title {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 24px, 37px, #000000);
+  text-transform: uppercase;
+  position: relative;
+  padding-top: 30px;
+  padding-left: 90px;
+  margin: 0;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+}
+
+.program__title::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: $sec-bg;
+  border-radius: 50%;
+  left: 20px;
+  top: 24px;
+
+  @media (min-width: $tablet) {
+    width: 200px;
+    height: 200px;
+    left: 393px;
+    top: 15px;
+  }
+
+  @media (min-width: 1100px) {
+    left: 593px;
+    top: 15px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100px;
+    height: 100px;
+    top: -30px;
+    left: 0;
+  }
+}
+
+.program__title--slim::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 50px;
+  background-image: url("../../icons/stack.svg#cat-slim");
+  background-repeat: no-repeat;
+  left: 27px;
+  top: 21px;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    width: 140px;
+    height: 194px;
+    top: 4px;
+    left: 423px;
+  }
+
+  @media (min-width: 1100px) {
+    top: 4px;
+    left: 623px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 70px;
+    height: 97px;
+    top: -36px;
+    left: 15px;
+  }
+}
+
+.program__title--pro::before {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 28px;
+  background-image: url("../../icons/stack.svg#cat-pro");
+  background-repeat: no-repeat;
+  left: 13px;
+  top: 35px;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    width: 268px;
+    height: 112px;
+    left: 363px;
+    top: 58px;
+  }
+
+  @media (min-width: 1100px) {
+    left: 563px;
+    top: 58px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 134px;
+    height: 56px;
+    top: -10px;
+    left: -17px;
+  }
+}
+
+.program__description {
+  @include font($pr-font, $pr-font-style, $pr-font-weight, $pr-font-size, $pr-line-height, $pr-color);
+  margin: 0 33px 23px 20px;
+
+  @media (min-width: $tablet) {
+    max-width: 340px;
+    margin: 0;
+    margin-bottom: 48px;
+    margin-right: 258px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 23px;
+  }
+}
+
+.program__link {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 16px, #000000);
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 20px;
+  padding-top: 18px;
+  padding-bottom: 22px;
+  border-top: 1px solid rgba(217, 217, 217, 1);
+
+  @media (min-width: $tablet) {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin: 0;
+    border: none;
+  }
+
+  @media (min-width: $tablet) {
+    margin-left: 1px;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.5;
+
+    &:hover,
+    &:focus {
+      background-color: #ebebeb;
+      color: #444444;
+      outline: none;
+    }
+
+    &:active {
+      background-color: #ebebeb;
+      color: #444444;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    width: 36px;
+    height: 12px;
+    background-image: url("../../icons/stack.svg#arrow");
+    background-repeat: no-repeat;
+    margin-left: 15px;
+    transition: transform 0.3s linear;
+    transform-origin: left center;
+
+    @media (min-width: $tablet) {
+      top: 35%;
+      margin-left: 24px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover::after {
+    transform: scaleX(1.5);
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,206 @@
+.advantages {
+  position: relative;
+  padding: 0 20px;
+
+  @media (min-width: $tablet) {
+    margin-top: 45px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    max-width: 1220px;
+    margin: 0 auto;
+    margin-top: 71px;
+    margin-bottom: 69px;
+  }
+
+  &::after {
+    @media (min-width: $tablet) {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #e6e6e6;
+      bottom: -47px;
+      left: 0;
+    }
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+}
+
+.advantages__title {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 36px, 40px, #000000);
+  margin: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.advantages__description {
+  @include font($pr-font, $pr-font-style, $pr-font-weight, $pr-font-size, $pr-line-height, $pr-color);
+  padding-left: 80px;
+  margin: 0;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    padding-top: 151px;
+    padding-bottom: 57px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.advantages__description br {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 49px;
+  counter-reset: number 0;
+
+  @media (min-width: $tablet) {
+    flex-flow: row wrap;
+    gap: 37px 133px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: 1075px) {
+    max-width: 704px;
+    margin: 0 auto;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    margin: 0;
+    margin-bottom: 49px;
+    gap: 80px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 60px;
+  counter-increment: number;
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+    width: 250px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 245px;
+  }
+}
+
+.advantages__item::after {
+  @media (min-width: $tablet) {
+    @include font($sec-font, $pr-font-style, $pr-font-weight, 280px, 280px, #f2f2f2);
+    content: counter(number);
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 115px;
+  }
+}
+
+.advantages__item--content::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../icons/stack.svg#leaf");
+  background-size: 34px 34px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: $sec-bg;
+  width: 60px;
+  height: 60px;
+  left: 0;
+
+  @media (min-width: $tablet) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
+}
+
+.advantages__item--cooking::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../icons/stack.svg#glass");
+  background-size: 26px 28px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: $sec-bg;
+  width: 60px;
+  height: 60px;
+  left: 0;
+
+  @media (min-width: $tablet) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
+}
+
+.advantages__item--nutrition::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../icons/stack.svg#eat");
+  background-size: 25px 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: $sec-bg;
+  width: 60px;
+  height: 60px;
+  left: 0;
+
+  @media (min-width: $tablet) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
+}
+
+.advantages__item--progress::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../icons/stack.svg#clocks");
+  background-size: 26px 31px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: $sec-bg;
+  width: 60px;
+  height: 60px;
+  left: 0;
+
+  @media (min-width: $tablet) {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+  }
+}

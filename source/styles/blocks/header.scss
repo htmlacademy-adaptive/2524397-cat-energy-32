@@ -1,5 +1,65 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  @media (min-width: $desktop) {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+}
+
+.header--catalog {
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet) {
+    border-bottom: 0 solid #d9d9d9;
+  }
+}
+
+.header__wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 20px 14px;
+
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 34px;
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1220px;
+    padding: 0;
+    margin: 0 auto;
+    position: absolute;
+    justify-content: flex-start;
+    margin-top: 55px;
+  }
+}
+
+.header__wrapper--catalog {
+  @media (min-width: $desktop) {
+    max-width: 1220px;
+    position: static;
+    padding: 0;
+    margin: 0 auto;
+    justify-content: flex-start;
+    margin-top: 55px;
+  }
+}
+
+.header__text-logo {
+  margin-top: 10px;
+
+  @media (min-width: $tablet) {
+    margin-top: 5px;
+    margin-left: 13px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 14px;
+  }
 }

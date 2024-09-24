@@ -1,0 +1,30 @@
+.catalog {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet) {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.catalog__list {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px 60px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 245px);
+    gap: 75px 80px;
+    margin: 0 auto;
+    max-width: 1220px;
+  }
+}

@@ -1,0 +1,58 @@
+.bonus {
+  position: relative;
+  margin-top: 35px;
+  padding-top: 187px;
+  padding-bottom: 43px;
+
+  @media (min-width: $tablet) {
+    max-width: 707px;
+    margin: 0 auto;
+    margin-top: 71px;
+    padding: 72px 125px 68px 421px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 245px;
+    padding: 185px 42px 43px;
+    margin: 0;
+  }
+}
+
+.bonus__text {
+  @include font($pr-font, $pr-font-style, $pr-font-weight, 16px, 20px, #ffffff);
+  margin: 0;
+  text-align: center;
+  margin-left: 58px;
+  margin-right: 61px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: center;
+  }
+}
+
+.bonus::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 59px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 80px;
+  background-image: url("../../icons/stack.svg#gift");
+
+  @media (min-width: $tablet) {
+    top: 58px;
+    left: 118px;
+  }
+
+  @media (min-width: $desktop) {
+    left: 123px;
+  }
+}

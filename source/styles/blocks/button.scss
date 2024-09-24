@@ -1,0 +1,39 @@
+.button {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 20px, 26px, #ffffff);
+  display: block;
+  text-align: center;
+  background-color: $sec-bg;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.button--disabled {
+  outline: none;
+  pointer-events: none;
+  opacity: 0.6;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+}

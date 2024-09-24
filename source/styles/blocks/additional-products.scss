@@ -1,0 +1,102 @@
+.additional-products {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 26px;
+
+  @media (min-width: $tablet) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 21px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    overflow-x: hidden;
+    height: 2px;
+    left: -100%;
+    width: 1000%;
+    background-color: #68b738;
+    top: 10px;
+
+    @media (min-width: $tablet) {
+      top: 15px;
+    }
+
+    @media (min-width: $desktop) {
+      top: 19px;
+    }
+  }
+}
+
+.additional-products__wrapper {
+  @media (min-width: $desktop) {
+    display: flex;
+    gap: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 97px;
+  }
+}
+
+.additional-products__list {
+  position: relative;
+
+  @media (min-width: $desktop) {
+    width: 896px;
+  }
+}
+
+.additional-products__title {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 24px, 24px, #000000);
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 35px;
+  margin-left: -20px;
+  padding-left: 20px;
+  padding-right: 40px;
+  position: relative;
+  background-color: #ffffff;
+  z-index: 1;
+
+  @media (min-width: $tablet) {
+    font-size: 32px;
+    line-height: 32px;
+    margin-left: 0;
+    padding-left: 40px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 1px;
+    margin-left: 40px;
+    padding-left: 40px;
+    margin-bottom: 81px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.additional-products__bonus {
+  background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/bonus-background-mobile@2x.png");
+  background-repeat: no-repeat;
+  background-position: center, center center;
+  background-size: auto, cover;
+  background-color: $sec-bg;
+
+  @media (min-width: $tablet) {
+    background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/bonus-background-tablet@2x.png");
+  }
+
+  @media (min-width: $desktop) {
+    background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/bonus-background-desktop@2x.png");
+    background-size: cover;
+  }
+}

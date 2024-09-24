@@ -1,0 +1,57 @@
+.text-button {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 20px, #ffffff);
+  background-color: $sec-bg;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.text-button--catalog {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.text-button--additional {
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.text-button--disabled {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 20px, #444444);
+  background-color: #f2f2f2;
+  pointer-events: none;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+    color: #444444;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: #444444;
+  }
+}

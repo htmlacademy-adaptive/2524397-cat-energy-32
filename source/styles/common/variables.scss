@@ -1,1 +1,17 @@
-/* здесь используйте глобальные переменные */
+//Шрифт
+$pr-font: "Lato", "Arial", sans-serif;
+$pr-font-style: normal;
+$pr-font-weight: 400;
+$pr-font-size: 14px;
+$pr-line-height: 18px;
+$pr-color: #444444;
+
+$sec-font: "Oswald", "Arial", sans-serif;
+
+//Фон
+$pr-bg: #ffffff;
+$sec-bg: #68b738;
+
+//Адаптивность
+$tablet: 768px;
+$desktop: 1440px;

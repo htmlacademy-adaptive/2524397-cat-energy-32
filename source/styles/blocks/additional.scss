@@ -1,0 +1,122 @@
+.additional {
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+
+  @media (min-width: $tablet) {
+    border: 1px solid #ebebeb;
+    padding: 26px 38px;
+    grid-template-columns: auto 200px 93px;
+  }
+
+  @media (min-width: $desktop) {
+    border-right: none;
+    border-left: none;
+    grid-template-columns: auto 203px 102px 244px;
+    gap: 10px;
+    padding: 0;
+    padding-top: 14px;
+    padding-bottom: 16px;
+    align-items: center;
+  }
+}
+
+.additional__link {
+  grid-column: 1/-1;
+  text-decoration: none;
+
+  @media (min-width: $tablet) {
+    grid-column: 1;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.additional__title {
+  @include font($sec-font, $pr-font-style, $pr-font-weight, 16px, 16px, #222222);
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    padding: 0;
+    margin-left: 1px;
+  }
+}
+
+.additional__quantity {
+  @include font($pr-font, $pr-font-style, $pr-font-weight, $pr-font-size, 14px, $pr-color);
+  padding-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    margin-top: 3px;
+    justify-self: end;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    justify-self: start;
+    margin: 0;
+    padding: 0;
+    padding-top: 6px;
+  }
+}
+
+.additional__price {
+  @include font($pr-font, $pr-font-style, $pr-font-weight, $pr-font-size, 14px, $pr-color);
+  justify-self: end;
+  padding-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    margin-right: 2px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    justify-self: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+  }
+}
+
+.additional__button {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  grid-row: 3;
+  grid-column: 1/-1;
+
+  @media (min-width: $tablet) {
+    grid-row: 2;
+    grid-column: -1/1;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    grid-row: 1;
+    grid-column: 4;
+  }
+}
