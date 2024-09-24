@@ -3,7 +3,7 @@
 }
 
 .main__hero {
-  background-image: linear-gradient(to bottom, (rgba(104, 183, 56, 0.85) 63%, #ffffff 63%)), url("../../images/index-background-mobile@2x.png");
+  background-image: linear-gradient(to bottom, (rgba(104, 183, 56, 0.85) 63%, #ffffff 63%)), url("../../images/index-background-mobile@2x.jpg");
   background-color: #4f4e53;
   background-position: top, top center;
   background-size: 100%, contain;
@@ -16,7 +16,7 @@
   }
 
   @media (min-width: $desktop) {
-    background-image: linear-gradient(to right, (#ffffff 50%,rgba(104, 183, 56, 0.85) 50%)), url("../../images/index-background-desktop-full@2x.png");
+    background-image: linear-gradient(to right, (#ffffff 50%,rgba(104, 183, 56, 0.85) 50%)), url("../../images/index-background-desktop@2x.jpg");
     background-color: #4f4e53;
     background-position: top, right -321px bottom;
     background-size: 100%, contain;

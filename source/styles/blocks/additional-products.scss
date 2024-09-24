@@ -85,18 +85,18 @@
 }
 
 .additional-products__bonus {
-  background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/bonus-background-mobile@2x.png");
+  background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/bonus-background-mobile@2x.jpg");
   background-repeat: no-repeat;
   background-position: center, center center;
   background-size: auto, cover;
   background-color: $sec-bg;
 
   @media (min-width: $tablet) {
-    background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/bonus-background-tablet@2x.png");
+    background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/bonus-background-tablet@2x.jpg");
   }
 
   @media (min-width: $desktop) {
-    background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/bonus-background-desktop@2x.png");
+    background-image: linear-gradient(to right, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/bonus-background-desktop@2x.jpg");
     background-size: cover;
   }
 }
