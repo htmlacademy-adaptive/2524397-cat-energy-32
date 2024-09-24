@@ -1,5 +1,5 @@
 .nav {
-  margin-left: 10px;
+  margin-left: auto;
   margin-bottom: 2px;
 
   @media (min-width: $tablet) {
@@ -41,6 +41,20 @@
   }
 }
 
+.nav__list--closed {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nav__list--opened {
+  border-bottom: 1px solid #e6e6e6;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
 .nav__list--nojs {
   @media (max-width: 767px) {
     display: block;
@@ -54,20 +68,6 @@
 .nav__list--nojs + .nav__toggle {
   @media (max-width: 767px) {
     display: none;
-  }
-}
-
-.nav__list--closed {
-  @media (max-width: 767px) {
-    display: none;
-  }
-}
-
-.nav__list--opened {
-  border-bottom: 1px solid #e6e6e6;
-
-  @media (max-width: 767px) {
-    display: block;
   }
 }
 
@@ -153,6 +153,7 @@
   width: 24px;
   height: 2px;
   background-color: #000000;
+  margin-right: 20px;
 
   @media (min-width: $tablet) {
     display: none;

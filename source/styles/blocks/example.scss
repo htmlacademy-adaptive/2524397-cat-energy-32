@@ -5,13 +5,13 @@
 
   @media (min-width: $tablet) {
     padding: 43px 30px 97px;
-    background-image: linear-gradient(to bottom, (#ffffff 57%, #f2f2f2 57%));
+    background-image: linear-gradient(to top, (#f2f2f2 463px, #ffffff 463px));
   }
 
   @media (min-width: $desktop) {
     padding: 0;
     padding-bottom: 75px;
-    background-image: linear-gradient(to bottom, (#ffffff 22%, #f2f2f2 23%));
+    background-image: linear-gradient(to bottom, (#ffffff 136, #f2f2f2 136));
   }
 }
 
